@@ -3,7 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ChatGPT 맞춤 설정 & GPTs 실전 강의</title>
+<title>ChatGPT 맞춤 설정 & GPTs 실전 강의자료</title>
+
+<!-- SEO & 카카오톡/SNS 미리보기 -->
+<meta name="description" content="AI 초보자를 위한 ChatGPT 실습 강의자료. 맞춤 설정부터 나만의 GPTs 제작까지 2시간 완성 과정.">
+<meta name="author" content="AI 생산성 강의">
+
+<!-- Open Graph (카카오톡, 페이스북, 슬랙 등) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="ChatGPT 맞춤 설정 & GPTs 실전 강의자료">
+<meta property="og:description" content="AI 초보자를 위한 ChatGPT 실습 강의자료. 맞춤 설정부터 나만의 GPTs 제작까지 2시간 완성 과정.">
+<meta property="og:url" content="https://strong88ai.github.io/choi_class_01/">
+<meta property="og:image" content="https://strong88ai.github.io/choi_class_01/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="AI 생산성 강의">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ChatGPT 맞춤 설정 & GPTs 실전 강의자료">
+<meta name="twitter:description" content="AI 초보자를 위한 ChatGPT 실습 강의자료. 맞춤 설정부터 나만의 GPTs 제작까지.">
+<meta name="twitter:image" content="https://strong88ai.github.io/choi_class_01/og-image.png">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
 <style>
 :root{--ink:#0F172A;--ink-2:#1E293B;--ink-m:#475569;--ink-f:#64748B;--surf:#FFF;--surf-a:#F8FAFC;--surf-t:#ECFDF5;--bdr:#CBD5E1;--bdr-s:#94A3B8;--t9:#0C3E3E;--t7:#0D5F5F;--t6:#0F766E;--t5:#14B8A6;--t1:#CCFBF1;--t0:#F0FDFA;--a6:#B45309;--a1:#FEF3C7;--a0:#FFFBEB;--b6:#1D4ED8;--b0:#EFF6FF;--r:14px;--rs:10px;--s1:0 1px 3px rgba(0,0,0,.08),0 1px 2px rgba(0,0,0,.06);--s2:0 4px 8px rgba(0,0,0,.06),0 2px 4px rgba(0,0,0,.04)}
@@ -116,6 +137,80 @@ h3.sh{font-size:22px;font-weight:700;color:var(--ink);margin:44px 0 20px;letter-
 .source{font-size:14px;color:var(--ink-f);margin-top:-18px;margin-bottom:28px}
 .footer{text-align:center;padding:56px 40px;background:var(--t9);color:rgba(255,255,255,.5);font-size:17px}
 .footer .hl{color:var(--t5);font-weight:700;font-size:20px}
+/* === MOBILE RESPONSIVE === */
+@media(max-width:768px){
+  body{font-size:17px;line-height:1.75}
+  .hero{padding:48px 20px 40px}
+  .hero h1{font-size:28px}
+  .hero .sub{font-size:17px;margin-bottom:20px}
+  .hero-meta{font-size:14px;gap:16px;flex-wrap:wrap;justify-content:center}
+  .nav-inner{padding:0 16px}
+  .nav-item{padding:12px 14px;font-size:15px}
+  .wrap{padding:0 20px}
+  .section{padding:40px 0 32px}
+  .overline{font-size:13px}
+  .section-title{font-size:24px}
+  .section-desc{font-size:16px;margin-bottom:28px}
+  h3.sh{font-size:19px;margin:32px 0 14px}
+  .cbox{padding:22px 20px}
+  .cbox .mt{font-size:18px}
+  .cbox .dt{font-size:16px}
+  .flow{flex-direction:column}
+  .flow-i{min-width:auto;padding:16px 20px;text-align:left;display:flex;align-items:center;gap:16px}
+  .flow-i:not(:last-child)::after{display:none}
+  .flow-i:not(:last-child){border-bottom:1px solid var(--bdr)}
+  .flow-n{margin-bottom:0;min-width:40px}
+  .flow-l{font-size:15px;margin-bottom:0}
+  .flow-d{font-size:14px}
+  .flow-i .flow-text{display:flex;flex-direction:column}
+  .split{grid-template-columns:1fr}
+  .sp-s.l{border-right:none;border-bottom:1.5px solid var(--bdr)}
+  .sp-s{padding:24px 20px}
+  .sp-s h4{font-size:18px}
+  .sp-s p{font-size:16px}
+  .chat-compare{grid-template-columns:1fr !important}
+  .g4{grid-template-columns:1fr !important;gap:10px}
+  .gc{padding:16px 18px}
+  .gc .gt{font-size:16px}
+  .gc .gd{font-size:15px}
+  .exs{grid-template-columns:1fr;gap:10px}
+  .exb{padding:18px}
+  .exr{font-size:16px;grid-template-columns:24px 1fr}
+  .cb{padding:18px 20px}
+  .cb pre{font-size:15px;line-height:1.75}
+  .cb .cp{padding:6px 14px;font-size:13px}
+  .si{grid-template-columns:44px 1fr;gap:14px;padding-bottom:24px}
+  .si:not(:last-child)::before{left:21px}
+  .sb{width:44px;height:44px;font-size:17px;border-radius:12px}
+  .sc h4{font-size:17px}
+  .sc p{font-size:15px}
+  .dt{font-size:15px}
+  .dt thead th{padding:10px 14px;font-size:13px}
+  .dt td{padding:10px 14px}
+  .co{font-size:15px;padding:16px 0 16px 18px;gap:14px}
+  .brk{padding:32px 0}
+  .brk span{font-size:16px;padding:12px 28px}
+  .mi{padding:24px 20px}
+  .mi h3{font-size:19px}
+  .mi>p{font-size:16px}
+  .mh{padding:16px 18px}
+  .mh strong{font-size:15px}
+  .mh p{font-size:15px}
+  .source{font-size:13px}
+  .footer{padding:40px 20px}
+  .footer .hl{font-size:17px}
+}
+
+/* === SVG 모바일 대응 === */
+@media(max-width:580px){
+  svg{max-width:100%;height:auto}
+  .chat-compare>div{min-width:0}
+}
+
+/* === 테이블 가로 스크롤 === */
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:20px 0}
+.table-wrap .dt{margin:0;min-width:500px}
+
 @media print{.nav{display:none}.cp{display:none}.hero{padding:40px 32px}}
 </style>
 </head>
@@ -145,10 +240,10 @@ h3.sh{font-size:22px;font-weight:700;color:var(--ink);margin:44px 0 20px;letter-
 <h2 class="section-title">학습 목표</h2>
 <p class="section-desc">이 수업을 마치면 다음을 직접 수행할 수 있습니다.</p>
 <div class="flow">
-<div class="flow-i"><div class="flow-n">1</div><div class="flow-l">개념 이해</div><div class="flow-d">맞춤 설정과 GPTs의<br>차이를 설명할 수 있다</div></div>
-<div class="flow-i"><div class="flow-n">2</div><div class="flow-l">맞춤 설정 적용</div><div class="flow-d">나의 상황에 맞는<br>설정을 직접 작성한다</div></div>
-<div class="flow-i"><div class="flow-n">3</div><div class="flow-l">GPTs 제작</div><div class="flow-d">나만의 AI 비서를<br>직접 만들어 본다</div></div>
-<div class="flow-i"><div class="flow-n">4</div><div class="flow-l">시스템 구축</div><div class="flow-d">두 기능을 조합한<br>활용 체계를 설계한다</div></div>
+<div class="flow-i"><div class="flow-n">1</div><div style="flex:1"><div class="flow-l">개념 이해</div><div class="flow-d">맞춤 설정과 GPTs의<br>차이를 설명할 수 있다</div></div></div>
+<div class="flow-i"><div class="flow-n">2</div><div style="flex:1"><div class="flow-l">맞춤 설정 적용</div><div class="flow-d">나의 상황에 맞는<br>설정을 직접 작성한다</div></div></div>
+<div class="flow-i"><div class="flow-n">3</div><div style="flex:1"><div class="flow-l">GPTs 제작</div><div class="flow-d">나만의 AI 비서를<br>직접 만들어 본다</div></div></div>
+<div class="flow-i"><div class="flow-n">4</div><div style="flex:1"><div class="flow-l">시스템 구축</div><div class="flow-d">두 기능을 조합한<br>활용 체계를 설계한다</div></div></div>
 </div>
 </section>
 
@@ -266,10 +361,10 @@ h3.sh{font-size:22px;font-weight:700;color:var(--ink);margin:44px 0 20px;letter-
 
 <h3 class="sh">설정 경로</h3>
 <div class="flow">
-<div class="flow-i"><div class="flow-n" style="background:var(--ink)">PC</div><div class="flow-l">프로필 아이콘</div><div class="flow-d">화면 우측 상단</div></div>
-<div class="flow-i"><div class="flow-n" style="background:var(--ink-m)">&rarr;</div><div class="flow-l">ChatGPT 맞춤 설정</div><div class="flow-d">클릭하여 진입</div></div>
-<div class="flow-i"><div class="flow-n" style="background:var(--ink)">앱</div><div class="flow-l">메뉴 &gt; 프로필</div><div class="flow-d">좌측 상단 메뉴</div></div>
-<div class="flow-i"><div class="flow-n" style="background:var(--ink-m)">&rarr;</div><div class="flow-l">개인 맞춤 설정</div><div class="flow-d">탭하여 진입</div></div>
+<div class="flow-i"><div class="flow-n" style="background:var(--ink)">PC</div><div style="flex:1"><div class="flow-l">프로필 아이콘</div><div class="flow-d">화면 우측 상단</div></div></div>
+<div class="flow-i"><div class="flow-n" style="background:var(--ink-m)">&rarr;</div><div style="flex:1"><div class="flow-l">ChatGPT 맞춤 설정</div><div class="flow-d">클릭하여 진입</div></div></div>
+<div class="flow-i"><div class="flow-n" style="background:var(--ink)">앱</div><div style="flex:1"><div class="flow-l">메뉴 &gt; 프로필</div><div class="flow-d">좌측 상단 메뉴</div></div></div>
+<div class="flow-i"><div class="flow-n" style="background:var(--ink-m)">&rarr;</div><div style="flex:1"><div class="flow-l">개인 맞춤 설정</div><div class="flow-d">탭하여 진입</div></div></div>
 </div>
 
 <h3 class="sh">입력란 1 — 나에 대한 정보: 4가지 핵심 항목</h3>
@@ -348,13 +443,13 @@ AI는 [처음 사용합니다 / 가끔 사용해 봤습니다 / 자주 사용합
 </div>
 
 <h3 class="sh">맞춤 설정 vs GPTs 비교</h3>
-<table class="dt"><thead><tr><th>구분</th><th>맞춤 설정</th><th>GPTs</th></tr></thead><tbody>
+<div class="table-wrap"><table class="dt"><thead><tr><th>구분</th><th>맞춤 설정</th><th>GPTs</th></tr></thead><tbody>
 <tr><td>적용 범위</td><td>모든 대화에 자동 적용</td><td>해당 GPTs 대화에서만 작동</td></tr>
 <tr><td>역할</td><td>ChatGPT의 기본 성격 설정</td><td>특정 업무 전용 챗봇</td></tr>
 <tr><td>파일 업로드</td><td>불가</td><td>PDF, 엑셀 등 업로드 가능</td></tr>
 <tr><td>비유</td><td>회사의 사내 규정</td><td>부서별 업무 매뉴얼</td></tr>
 <tr class="hl"><td>조합 전략</td><td colspan="2">맞춤 설정으로 기본 바탕을 깔고, GPTs로 업무별 자동화를 구축</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h3 class="sh">준비물</h3>
 <div class="g4" style="grid-template-columns:1fr 1fr 1fr">
@@ -448,21 +543,21 @@ AI는 [처음 사용합니다 / 가끔 사용해 봤습니다 / 자주 사용합
 <p style="text-align:center;font-size:15px;color:var(--ink-f);padding:8px 0 12px">GPT 빌더 Configure 탭의 구조. 왼쪽에서 설정하면 오른쪽 미리보기에 즉시 반영됩니다.</p>
 </div>
 
-<table class="dt"><thead><tr><th>항목</th><th>설명</th></tr></thead><tbody>
+<div class="table-wrap"><table class="dt"><thead><tr><th>항목</th><th>설명</th></tr></thead><tbody>
 <tr><td>이름 (Name)</td><td>GPTs의 이름</td></tr>
 <tr><td>설명 (Description)</td><td>이 GPTs가 하는 일 한 줄 요약</td></tr>
 <tr class="hl"><td>지침 (Instructions)</td><td>핵심 설정 영역 — 역할, 규칙, 말투를 정의</td></tr>
 <tr><td>대화 시작 문구</td><td>사용자에게 보여줄 예시 질문</td></tr>
 <tr><td>지식 (Knowledge)</td><td>참고 파일 업로드 (PDF, 엑셀 등)</td></tr>
 <tr><td>기능 (Capabilities)</td><td>웹 검색, 이미지 생성, 코드 실행 ON/OFF</td></tr>
-</tbody></table>
+</tbody></table></div>
 
 <h3 class="sh">좋은 Instructions 작성법</h3>
 <div class="flow">
-<div class="flow-i"><div class="flow-n">1</div><div class="flow-l">역할 정의</div><div class="flow-d">"너는 ~하는<br>전문가야"</div></div>
-<div class="flow-i"><div class="flow-n">2</div><div class="flow-l">규칙 설정</div><div class="flow-d">"한국어로 답변해"<br>"3단계로 설명해"</div></div>
-<div class="flow-i"><div class="flow-n">3</div><div class="flow-l">제한 조건</div><div class="flow-d">"모르면 모른다고 해"<br>"추측하지 마"</div></div>
-<div class="flow-i"><div class="flow-n">4</div><div class="flow-l">말투 지정</div><div class="flow-d">"친절하고 격려하는<br>톤으로 말해줘"</div></div>
+<div class="flow-i"><div class="flow-n">1</div><div style="flex:1"><div class="flow-l">역할 정의</div><div class="flow-d">"너는 ~하는<br>전문가야"</div></div></div>
+<div class="flow-i"><div class="flow-n">2</div><div style="flex:1"><div class="flow-l">규칙 설정</div><div class="flow-d">"한국어로 답변해"<br>"3단계로 설명해"</div></div></div>
+<div class="flow-i"><div class="flow-n">3</div><div style="flex:1"><div class="flow-l">제한 조건</div><div class="flow-d">"모르면 모른다고 해"<br>"추측하지 마"</div></div></div>
+<div class="flow-i"><div class="flow-n">4</div><div style="flex:1"><div class="flow-l">말투 지정</div><div class="flow-d">"친절하고 격려하는<br>톤으로 말해줘"</div></div></div>
 </div>
 </section>
 
@@ -503,18 +598,38 @@ AI는 [처음 사용합니다 / 가끔 사용해 봤습니다 / 자주 사용합
 
 </main>
 
+<!-- QR CODE SECTION -->
+<section id="qr-section" style="text-align:center;padding:64px 20px 56px;background:#0A1628;border-top:3px solid #14B8A6">
+  <p style="font-size:15px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#14B8A6;margin-bottom:10px">ACCESS</p>
+  <h2 style="font-size:clamp(24px,4vw,32px);font-weight:800;color:#fff;margin-bottom:8px;letter-spacing:-.02em">강의자료 바로 접속하기</h2>
+  <p style="font-size:17px;color:rgba(255,255,255,.6);margin-bottom:32px">스마트폰 카메라로 아래 QR코드를 스캔하세요</p>
+  <div id="qr-code" style="display:inline-block;padding:24px;background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,.3)"></div>
+  <p style="margin-top:20px;font-size:15px;color:rgba(255,255,255,.4);word-break:break-all">https://strong88ai.github.io/choi_class_01/</p>
+</section>
+
 <footer class="footer">
 <p class="hl">오늘 배운 맞춤 설정 + GPTs 조합만으로도</p>
 <p class="hl">AI 활용의 실질적인 차이를 만들 수 있습니다.</p>
 <p style="margin-top:16px">감사합니다.</p>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script>
 function go(id){document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'})}
 const ids=['obj','p1','pr1','p2','pr2','ms'];
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll('.nav-item').forEach(b=>b.classList.remove('active'));const i=ids.indexOf(e.target.id);if(i>=0)document.querySelectorAll('.nav-item')[i].classList.add('active')}})},{rootMargin:'-80px 0px -60% 0px'});
 ids.forEach(id=>{const el=document.getElementById(id);if(el)obs.observe(el)});
 function cc(btn){const pre=btn.closest('.cb').querySelector('pre');navigator.clipboard.writeText(pre.textContent).then(()=>{btn.textContent='복사됨';btn.classList.add('copied');setTimeout(()=>{btn.textContent='복사';btn.classList.remove('copied')},2000)})}
+
+// QR Code 생성
+new QRCode(document.getElementById("qr-code"), {
+  text: "https://strong88ai.github.io/choi_class_01/",
+  width: 280,
+  height: 280,
+  colorDark: "#0C3E3E",
+  colorLight: "#FFFFFF",
+  correctLevel: QRCode.CorrectLevel.H
+});
 </script>
 </body>
 </html>
