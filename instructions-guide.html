@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLM 서비스란? — Mark's AI Class</title>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{font-family:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;background:#F0FDFA;-webkit-font-smoothing:antialiased}
+
+.wrap{position:relative;width:100%;height:100vh}
+.slide{display:none;width:100%;height:100%}
+.slide.active{display:flex;flex-direction:column}
+.card{display:flex;flex-direction:column;height:100%}
+
+/* 헤더 */
+.hd{background:linear-gradient(135deg,#0C3E3E 0%,#0F766E 100%);padding:28px 48px 24px;text-align:center}
+.hd .badge{display:inline-block;background:rgba(20,184,166,.2);border:1px solid rgba(20,184,166,.4);color:#14B8A6;font-size:14px;font-weight:700;padding:6px 18px;border-radius:100px;letter-spacing:.05em;margin-bottom:12px}
+.hd h1{font-size:38px;font-weight:800;color:#fff;line-height:1.25;letter-spacing:-.02em;margin-bottom:12px}
+.hd h2{font-size:34px;font-weight:800;color:#fff;line-height:1.25;letter-spacing:-.02em;margin-bottom:12px}
+.hd .sub{font-size:19px;color:rgba(255,255,255,.7);line-height:1.5}
+.hd .accent{color:#14B8A6;font-weight:700}
+
+/* 본문 */
+.bd{flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:24px 80px;background:#F0FDFA}
+.bd .intro{font-size:17px;color:#475569;line-height:1.6;margin-bottom:22px;text-align:center;white-space:nowrap}
+.bd .intro strong{color:#0F766E}
+
+/* 3열 그리드 */
+.features{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%}
+.feat{background:#fff;border:1.5px solid #CCFBF1;border-radius:14px;padding:20px 22px}
+.feat-icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#0F766E,#14B8A6);display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.feat h3{font-size:18px;font-weight:700;color:#0F172A;margin-bottom:4px;white-space:nowrap}
+.feat p{font-size:14px;color:#64748B;line-height:1.4;white-space:nowrap}
+
+/* 서비스 카드 */
+.services{display:flex;flex-direction:column;gap:10px;width:100%}
+.svc{background:#fff;border-radius:16px;padding:20px 26px;border:1.5px solid #CCFBF1;display:flex;align-items:center;gap:20px}
+.svc-logo{width:56px;height:56px;border-radius:14px;overflow:hidden;flex-shrink:0;background:#fff}
+.svc-logo img{width:100%;height:100%;object-fit:contain}
+.svc-info h3{font-size:22px;font-weight:800;color:#0F172A;margin-bottom:2px}
+.svc-info .company{font-size:14px;font-weight:700;color:#0F766E;margin-bottom:3px}
+.svc-info p{font-size:17px;color:#64748B;line-height:1.5}
+
+/* 다이어그램 */
+.brain-section{text-align:center;margin-bottom:16px}
+.brain-box{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,#0C3E3E,#0F766E);padding:14px 28px;border-radius:12px}
+.brain-text .eq{font-size:20px;font-weight:800;color:#fff}
+.brain-text .sub-t{font-size:12px;color:#14B8A6;font-weight:600}
+
+/* 하단 */
+.ft{background:#0F766E;padding:10px 40px;display:flex;align-items:center;justify-content:center;gap:8px}
+.ft span{font-size:13px;font-weight:600;color:rgba(255,255,255,.5)}
+.ft .dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.25);cursor:pointer;transition:all .2s}
+.ft .dot.active{background:#14B8A6;box-shadow:0 0 8px rgba(20,184,166,.5)}
+
+/* 네비게이션 - 카드 안쪽 */
+.nav-btn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.95);border:1.5px solid #CCFBF1;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:18px;color:#0F766E;font-weight:700;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:all .2s;z-index:10}
+.nav-btn:hover{box-shadow:0 4px 16px rgba(0,0,0,.12);transform:translateY(-50%) scale(1.05)}
+.nav-btn.prev{left:20px}
+.nav-btn.next{right:20px}
+
+@media(max-width:640px){
+  .hd{padding:20px 20px 16px}
+  .hd h1{font-size:26px}
+  .hd h2{font-size:24px}
+  .bd{padding:16px 20px}
+  .features{grid-template-columns:1fr 1fr;gap:8px}
+  .nav-btn{width:32px;height:32px;font-size:14px}
+  .nav-btn.prev{left:8px}
+  .nav-btn.next{right:8px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <button class="nav-btn prev" onclick="go(-1)">&#8249;</button>
+  <button class="nav-btn next" onclick="go(1)">&#8250;</button>
+
+  <!-- 슬라이드 1 -->
+  <div class="slide active"><div class="card">
+    <div class="hd">
+      <span class="badge">Mark's AI Class</span>
+      <h1>LLM 서비스란?</h1>
+      <p class="sub"><span class="accent">Large Language Model</span>의 약자로, 한국어로는 <span class="accent">대규모 언어 모델</span>이라고 부릅니다.</p>
+    </div>
+    <div class="bd">
+      <p class="intro">LLM은 방대한 텍스트를 학습하여 <strong>사람처럼 언어를 이해하고 생성</strong>하는 AI 기술입니다.</p>
+      <div class="features">
+        <div class="feat"><div class="feat-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M8 10h8M8 14h4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div><h3>질문 답변</h3><p>신속하고 정확한 답변</p></div>
+        <div class="feat"><div class="feat-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>글쓰기 / 요약</h3><p>블로그, 이메일, 제안서 작성</p></div>
+        <div class="feat"><div class="feat-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M3 5h12M9 3v2M11.048 17.96A9 9 0 005 8h5.5M21 12l-4 4-4-4M17 21V12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>번역</h3><p>자연스러운 다국어 통번역</p></div>
+        <div class="feat"><div class="feat-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1M6.343 7.757l-.707-.707M4 12H3M6.343 16.243l-.707.707M12 21v-1M17.657 16.243l.707.707M20 12h1M17.657 7.757l.707-.707M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div><h3>아이디어 정리</h3><p>생각 구조화, 아이디어 제안</p></div>
+        <div class="feat"><div class="feat-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>코드 작성</h3><p>프로그래밍 코드 생성</p></div>
+        <div class="feat"><div class="feat-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>자료 분석</h3><p>데이터 분석, 인사이트 도출</p></div>
+      </div>
+    </div>
+    <div class="ft"><div class="dot active" onclick="goTo(0)"></div><div class="dot" onclick="goTo(1)"></div><span>1 / 2</span></div>
+  </div></div>
+
+  <!-- 슬라이드 2 -->
+  <div class="slide"><div class="card">
+    <div class="hd">
+      <span class="badge">Mark's AI Class</span>
+      <h2>LLM = 똑똑한 두뇌</h2>
+      <p class="sub">LLM은 <span class="accent">두뇌</span>이고, 서비스는 그 두뇌를 활용한 <span class="accent">제품</span>입니다.</p>
+    </div>
+    <div class="bd">
+      <div class="brain-section">
+        <div class="brain-box">
+          <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><path d="M24 4C16 4 10 10 10 17c0 4 2 7.5 5 10v5a2 2 0 002 2h14a2 2 0 002-2v-5c3-2.5 5-6 5-10 0-7-6-13-14-13z" fill="#14B8A6" opacity=".3"/><path d="M24 4C16 4 10 10 10 17c0 4 2 7.5 5 10v5a2 2 0 002 2h14a2 2 0 002-2v-5c3-2.5 5-6 5-10 0-7-6-13-14-13z" stroke="#14B8A6" stroke-width="2.5"/><path d="M18 38h12M20 42h8" stroke="#14B8A6" stroke-width="2.5" stroke-linecap="round"/><circle cx="20" cy="18" r="2" fill="#fff"/><circle cx="28" cy="18" r="2" fill="#fff"/><path d="M18 24c0 0 2 3 6 3s6-3 6-3" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+          <div class="brain-text"><div class="eq">대규모 언어 모델</div><div class="sub-t">Large Language Model</div></div>
+        </div>
+      </div>
+      <div class="services">
+        <div class="svc"><div class="svc-logo"><img src="챗지피티.png" alt="ChatGPT"></div><div class="svc-info"><h3>ChatGPT</h3><p class="company">by OpenAI</p><p>OpenAI의 대화형 AI 서비스</p></div></div>
+        <div class="svc"><div class="svc-logo"><img src="제미나이.png" alt="Gemini"></div><div class="svc-info"><h3>Gemini</h3><p class="company">by Google</p><p>Google의 AI 어시스턴트 서비스</p></div></div>
+        <div class="svc"><div class="svc-logo"><img src="클로드.png" alt="Claude"></div><div class="svc-info"><h3>Claude</h3><p class="company">by Anthropic</p><p>Anthropic의 대화형 AI 서비스 / 플랫폼</p></div></div>
+      </div>
+    </div>
+    <div class="ft"><div class="dot" onclick="goTo(0)"></div><div class="dot active" onclick="goTo(1)"></div><span>2 / 2</span></div>
+  </div></div>
+</div>
+
+<script>
+let cur=0;
+const slides=document.querySelectorAll('.slide');
+const total=slides.length;
+function goTo(i){slides[cur].classList.remove('active');cur=i;slides[cur].classList.add('active')}
+function go(d){let n=cur+d;if(n<0)n=total-1;if(n>=total)n=0;goTo(n)}
+window.addEventListener('message',function(e){if(e.data==='goToSlide0')goTo(0)});
+</script>
+</body>
+</html>
