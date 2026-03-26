@@ -32,8 +32,8 @@ body{font-family:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystem
 .features{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;width:100%}
 .feat{background:#fff;border:1.5px solid #CCFBF1;border-radius:14px;padding:20px 22px}
 .feat-icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#0F766E,#14B8A6);display:flex;align-items:center;justify-content:center;margin-bottom:10px}
-.feat h3{font-size:18px;font-weight:700;color:#0F172A;margin-bottom:4px;white-space:nowrap}
-.feat p{font-size:14px;color:#64748B;line-height:1.4;white-space:nowrap}
+.feat h3{font-size:20px;font-weight:700;color:#0F172A;margin-bottom:4px;white-space:nowrap}
+.feat p{font-size:16px;color:#64748B;line-height:1.4;white-space:nowrap}
 
 /* 서비스 카드 */
 .services{display:flex;flex-direction:column;gap:10px;width:100%}
@@ -98,7 +98,7 @@ body{font-family:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystem
         <div class="feat"><div class="feat-icon"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>자료 분석</h3><p>데이터 분석, 인사이트 도출</p></div>
       </div>
     </div>
-    <div class="ft"><div class="dot active" onclick="goTo(0)"></div><div class="dot" onclick="goTo(1)"></div><span>1 / 2</span></div>
+    <div class="ft"><div class="dot active" onclick="goTo(0)"></div><div class="dot" onclick="goTo(1)"></div><div class="dot" onclick="goTo(2)"></div><span>1 / 3</span></div>
   </div></div>
 
   <!-- 슬라이드 2 -->
@@ -121,7 +121,25 @@ body{font-family:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystem
         <div class="svc"><div class="svc-logo"><img src="클로드.png" alt="Claude"></div><div class="svc-info"><h3>Claude</h3><p class="company">by Anthropic</p><p>Anthropic의 대화형 AI 서비스 / 플랫폼</p></div></div>
       </div>
     </div>
-    <div class="ft"><div class="dot" onclick="goTo(0)"></div><div class="dot active" onclick="goTo(1)"></div><span>2 / 2</span></div>
+    <div class="ft"><div class="dot" onclick="goTo(0)"></div><div class="dot active" onclick="goTo(1)"></div><div class="dot" onclick="goTo(2)"></div><span>2 / 3</span></div>
+  </div></div>
+
+  <!-- 슬라이드 3: 프롬프트(Prompt)란? -->
+  <div class="slide"><div class="card">
+    <div class="hd">
+      <span class="badge">Mark's AI Class</span>
+      <h2>프롬프트(Prompt)란?</h2>
+      <p class="sub">AI에게 특정 작업이나 답변을 요구하기 위한 <span class="accent">명령어</span>입니다.</p>
+    </div>
+    <div class="bd">
+      <p class="intro">사용자가 텍스트 창에 입력하는 모든 글이 <strong>프롬프트</strong>이며,<br>AI 답변의 방향을 정해주는 <strong>출발점</strong>입니다.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;width:100%">
+        <div class="feat" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px"><div class="feat-icon" style="flex-shrink:0"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M8 10h8M8 14h4M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></div><div><h3 style="margin-bottom:6px;font-size:20px">AI에게 알려주는 '지시문'</h3><p style="white-space:normal;font-size:16px;line-height:1.6">"무엇을 해줘"라고 알려주는 것이 프롬프트입니다.<br>단순한 질문뿐 아니라 <strong style="color:#0F766E">명령, 요청, 조건, 역할 설정</strong>까지 모두 포함합니다.</p></div></div>
+        <div class="feat" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px"><div class="feat-icon" style="flex-shrink:0"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3 style="margin-bottom:6px;font-size:20px">꼭 길고 어려울 필요는 없습니다</h3><p style="white-space:normal;font-size:16px;line-height:1.6">프롬프트는 짧아도 됩니다.<br>하지만 <strong style="color:#0F766E">구체적일수록</strong> 원하는 답에 더 가까워집니다.</p></div></div>
+        <div class="feat" style="display:flex;align-items:flex-start;gap:16px;padding:20px 24px"><div class="feat-icon" style="flex-shrink:0"><svg width="20" height="20" fill="none" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><div><h3 style="margin-bottom:6px;font-size:20px">프롬프트 예시</h3><p style="white-space:normal;font-size:16px;line-height:1.6">"이 글 요약해줘" · "이 문장을 더 자연스럽게 바꿔줘"<br>"표로 정리해줘" · "한국어로, 쉽게 번역해줘"</p></div></div>
+      </div>
+    </div>
+    <div class="ft"><div class="dot" onclick="goTo(0)"></div><div class="dot" onclick="goTo(1)"></div><div class="dot active" onclick="goTo(2)"></div><span>3 / 3</span></div>
   </div></div>
 </div>
 
@@ -129,8 +147,12 @@ body{font-family:'Pretendard Variable','Pretendard',-apple-system,BlinkMacSystem
 let cur=0;
 const slides=document.querySelectorAll('.slide');
 const total=slides.length;
-function goTo(i){slides[cur].classList.remove('active');cur=i;slides[cur].classList.add('active')}
-function go(d){let n=cur+d;if(n<0)n=total-1;if(n>=total)n=0;goTo(n)}
+const prevBtn=document.querySelector('.nav-btn.prev');
+const nextBtn=document.querySelector('.nav-btn.next');
+function updateNav(){prevBtn.style.display=cur===0?'none':'flex';nextBtn.style.display=cur===total-1?'none':'flex'}
+function goTo(i){slides[cur].classList.remove('active');cur=i;slides[cur].classList.add('active');updateNav()}
+function go(d){let n=cur+d;if(n<0||n>=total)return;goTo(n)}
+updateNav();
 window.addEventListener('message',function(e){if(e.data==='goToSlide0')goTo(0)});
 </script>
 </body>
